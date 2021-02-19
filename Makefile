@@ -1,12 +1,9 @@
 HTML=$(wildcard **/*.html) $(wildcard *.html)
-VERSIONS=$(wildcard agreement/*.md)
-DOT_FLAGS=-Nfontname=Arial -Efontname=Arial -Gfontname=Arial
-
-figures=$(wildcard figures/*.dot)
+FORMS=$(wildcard agreement/*.md) $(wildcard worksheet/*.md)
 
 .PHONY: all
 
-all: $(VERSIONS:.md=.odt) $(VERSIONS:.md=.docx) $(VERSIONS:.md=.pdf) $(figures:.dot=.png) $(figures:.dot=.svg)
+all: $(FORMS:.md=.odt) $(FORMS:.md=.docx) $(FORMS:.md=.pdf)
 	for file in $(HTML); do tidy -config tidy.config $$file | sponge $$file ; done
 
 %.odt: %.md
