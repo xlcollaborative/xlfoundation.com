@@ -1,5 +1,6 @@
 HTML=$(wildcard **/*.html) $(wildcard *.html)
 FORMS=$(wildcard agreement/*.md) $(wildcard worksheet/*.md)
+FORMATS=odt docx rtf pdf
 DOT_FLAGS=-Nfontname=Arial -Efontname=Arial -Gfontname=Arial
 LOGOS=logo-500.png logo-1000.png social.png
 
@@ -7,7 +8,7 @@ figures=$(wildcard figures/*.dot)
 
 .PHONY: all
 
-all: $(FORMS:.md=.odt) $(FORMS:.md=.docx) $(FORMS:.md=.pdf) $(LOGOS) $(figures:.dot=.png) $(figures:.dot=.svg)
+all: $(foreach format,$(FORMATS),$(addsuffix .$(format),$(FORMS:.md=))) $(LOGOS) $(figures:.dot=.png) $(figures:.dot=.svg)
 	for file in $(HTML); do tidy -config tidy.config $$file | sponge $$file ; done
 
 %.odt: %.md
@@ -15,6 +16,9 @@ all: $(FORMS:.md=.odt) $(FORMS:.md=.docx) $(FORMS:.md=.pdf) $(LOGOS) $(figures:.
 
 %.docx: %.md
 	pandoc -o $@ $<
+
+%.rtf: %.md
+	pandoc -o $@ --standalone $<
 
 %.pdf: %.md
 	pandoc --variable fontsize=11pt -o $@ $<
