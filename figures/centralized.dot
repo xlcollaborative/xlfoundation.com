@@ -8,7 +8,7 @@ digraph {
     Cara;
   }
 
-  Organization[shape=rect,label="Organization\n(Company, Foundation)"];
+  Organization[shape=rect,label="Foundation"];
   {Charles,Cara,Dana} -> Organization;
 
   subgraph clusterUsers {

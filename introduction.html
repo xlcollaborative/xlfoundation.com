@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Illustrated Introduction to Cross License Foundations</title>
+  <link href="styles.css" rel="stylesheet">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Illustrated Introduction to Cross License Foundations">
+  <meta name="twitter:description" content="decentralized stewardship of collaborative projects">
+  <meta name="twitter:image" content="https://xlfoundation.com/social.png">
+  <meta name="twitter:creator" content="@kemitchell">
+  <meta name="og:type" content="website">
+  <meta name="og:title" content="Illustrated Introduction to Cross License Foundations">
+  <meta name="og:description" content="decentralized stewardship of collaborative projects">
+  <meta name="og:image" content="https://xlfoundation.com/social.png">
+</head>
+<body>
+  <header role="banner">
+    <a href="/"><img src="/logo-500.png" alt="logo"></a>
+    <h1>Cross License Foundations</h1>
+    <p class="slogan">decentralized stewardship of collaborative projects</p>
+  </header>
+  <main role="main">
+    <h2>Illustrated Introduction</h2>
+    <p>The cross license foundation represents a new idea in licensing. Once you understand that idea, it’s really pretty simple. To get there, it often helps to compare cross license foundations to how online creative projects handle licensing today.</p>
+    <h3>Distributed Licensing Projects</h3>
+    <table>
+      <tr>
+        <th>Example</th>
+        <td>Linux kernel</td>
+      </tr>
+      <tr>
+        <th>Pro</th>
+        <td>low overhead</td>
+      </tr>
+      <tr>
+        <th>Con</th>
+        <td>inflexible licensing</td>
+      </tr>
+    </table>
+    <p>In a distributed licensing project, like the Linux kernel, contributors licenses their work to users directly.</p>
+    <p>This approach is relatively simple, and requires little planning or legal overhead. Contributors only need to decide which license the project will use, and to be careful about the license terms for the work of others that they incorporate.</p>
+    <p>However, distributed licensing projects become unable to make licensing decisions over time, like upgrading to a new version of their license, if contributors become unavailable or refuse to go along. Even a single holdout can block a change.</p>
+    <figure>
+      <img src="/figures/distributed.svg" alt="distributed">
+      <figcaption>
+        Distributed Licensing Project with a Holdout Problem
+      </figcaption>
+    </figure>
+    <p>This diagram represent a distributed licensing project. Dana has made contributions to the project, but is no longer available to discuss licensing. Cara and Charles can still make decisions about licensing of their own contributions, but they can’t make decisions for Dana’s contributions, so they can’t make decisions for the project as a whole.</p>
+    <h3>Centralized Licensing Projects</h3>
+    <table>
+      <tr>
+        <th>Example</th>
+        <td>GCC</td>
+      </tr>
+      <tr>
+        <th>Pro</th>
+        <td>flexible licensing</td>
+      </tr>
+      <tr>
+        <th>Con</th>
+        <td>high overhead</td>
+      </tr>
+    </table>
+    <p>In centralized licensing projects, like the Free Software Foundation’s GNU Compiler Collection, contributors license or assign ownership of their contributions to a foundation, which in turn licenses users.</p>
+    <p>If the foundation takes assignments or broad enough contributor license grants, it gathers sufficient rights to make licensing decisions for the project as a whole over time. It doesn’t lose this ability if contributors become unavailable or do not agree with the change.</p>
+    <figure>
+      <img src="/figures/centralized.svg" alt="centralized">
+      <figcaption>
+        Centralized Licensing Project
+      </figcaption>
+    </figure>
+    <p>This diagram represents a centralized licensing project. Though Dana has become unavailable, the foundation can still upgrade the license terms for the project as a whole.</p>
+    <p>The foundation might have any number of governance structures that determine how it makes decisions, including licensing decisions. In any event, the foundation likely paid substantial legal and political overhead to form a corporation or other legal entity, set up its governance structure, and seek tax exemption.</p>
+    <h3>Cross License Foundations</h3>
+    <p>Cross license foundations combine the low overhead of distributed licensing with the flexibility of centralized foundations.</p>
+    <p>Rather than assigning or licensing their contributions to a centralized foundation, contributors license each other. In other words, each contributor “cross licenses” every other contributor. Those cross licenses allow them to make licensing decisions for the project as a whole, subject to a voting process that gives each contributor an equal say.</p>
+    <figure>
+      <img src="/figures/xlf.svg" alt="XLF">
+      <figcaption>
+        Cross License Foundation
+      </figcaption>
+    </figure>
+    <p>Any contributor can start the process of offering the project as a whole under new license terms. In order to do so, they must secure and document a majority of votes from other contributors who respond to their proposal.</p>
+  </main>
+  <footer role="contentinfo">
+    <p>You can help improve this website <a href="https://github.com/xlcollaborative/xlfoundation.com">on GitHub</a>.</p>
+  </footer>
+</body>
+</html>

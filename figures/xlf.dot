@@ -3,7 +3,7 @@ digraph {
   graph[K=1];
 
   subgraph clusterContributors {
-    label="Collaborative";
+    label="Cross License Foundation";
     fontcolor=grey;
     color=grey;
     Charles;
