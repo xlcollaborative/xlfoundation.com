@@ -3,7 +3,7 @@ FORMS=$(wildcard agreement/*.md) $(wildcard worksheet/*.md)
 
 .PHONY: all
 
-all: $(FORMS:.md=.odt) $(FORMS:.md=.docx) $(FORMS:.md=.pdf)
+all: $(FORMS:.md=.odt) $(FORMS:.md=.docx) $(FORMS:.md=.pdf) logo-500.png logo-1000.png
 	for file in $(HTML); do tidy -config tidy.config $$file | sponge $$file ; done
 
 %.odt: %.md
@@ -20,3 +20,6 @@ all: $(FORMS:.md=.odt) $(FORMS:.md=.docx) $(FORMS:.md=.pdf)
 
 %.svg: %.dot
 	dot -Tsvg $(DOT_FLAGS) < $< > $@
+
+logo-%.png: logo.svg
+	inkscape $< -w $* -e $@
